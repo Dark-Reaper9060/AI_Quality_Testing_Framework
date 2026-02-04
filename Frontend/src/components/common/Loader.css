@@ -1,0 +1,89 @@
+@keyframes flow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(var(--background) / 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.loader {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.trace-bg {
+  stroke: hsl(var(--border));
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.trace-flow {
+  stroke-width: 1.8;
+  fill: none;
+  stroke-dasharray: 40 400;
+  stroke-dashoffset: 438;
+  filter: drop-shadow(0 0 6px currentColor);
+  animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+}
+
+.purple {
+  --color: hsl(263.4 70% 50.4%);
+  stroke: var(--color);
+  color: var(--color);
+}
+
+.blue {
+  --color: hsl(210 90% 50%);
+  stroke: var(--color);
+  color: var(--color);
+}
+
+.green {
+  --color: hsl(142 71.8% 29.2%);
+  stroke: var(--color);
+  color: var(--color);
+}
+
+.yellow {
+  --color: hsl(38 92% 50%);
+  stroke: var(--color);
+  color: var(--color);
+}
+
+.red {
+  --color: hsl(0 84.2% 60.2%);
+  stroke: var(--color);
+  color: var(--color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .loader {
+    max-width: 300px;
+    padding: 1rem;
+  }
+  
+  .loader svg {
+    transform: scale(0.8);
+  }
+}
