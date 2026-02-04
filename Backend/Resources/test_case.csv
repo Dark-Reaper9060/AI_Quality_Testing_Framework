@@ -1,0 +1,111 @@
+question_id,category,sub_category,question
+1,accuracy,equipment_info,What is the current status of the Air Compressor AC-200-SS?
+2,accuracy,equipment_info,When was the Centrifugal Pump XYZ-500 installed?
+3,accuracy,equipment_info,Where is the Diesel Generator DG-500kW located?
+4,accuracy,equipment_info,What is the manufacturer of the Cooling Tower CT-5000?
+5,accuracy,equipment_info,Give me the serial number for the Boiler B-10Ton
+6,accuracy,equipment_info,Which equipment has serial number TR2020-45678?
+7,accuracy,equipment_info,What's the model of the Forklift equipment?
+8,accuracy,equipment_info,List all equipment manufactured by Atlas Copco
+9,accuracy,equipment_info,How many equipment are currently operating normally?
+10,accuracy,equipment_info,Which equipment are currently under maintenance?
+11,accuracy,monitoring_data,What is the current temperature reading for the Air Compressor's compressor oil?
+12,accuracy,monitoring_data,Show me vibration data for equipment FM2023-78451
+13,accuracy,monitoring_data,Which equipment has warning status readings?
+14,accuracy,monitoring_data,What's the pressure reading at the Air Compressor discharge?
+15,accuracy,monitoring_data,List all monitoring data for the Chiller with warnings
+16,accuracy,monitoring_data,What is the normal temperature range for the Cooling Tower gearbox oil?
+17,accuracy,monitoring_data,Which equipment has the highest vibration reading?
+18,accuracy,monitoring_data,What is the current battery voltage for the Forklift?
+19,accuracy,monitoring_data,Show me all temperature readings above their thresholds
+20,accuracy,monitoring_data,What monitoring parameters are tracked for the Automated Guided Vehicle?
+21,accuracy,maintenance_history,What maintenance issues were reported for AC2022-34567 in 2023?
+22,accuracy,maintenance_history,List all open maintenance tickets
+23,accuracy,maintenance_history,What was the most recent maintenance done on the Cooling Tower?
+24,accuracy,maintenance_history,How many critical severity issues have been reported?
+25,accuracy,maintenance_history,Show me all maintenance logs for equipment BAC2021-78901
+26,accuracy,maintenance_history,Which equipment has the most maintenance records?
+27,accuracy,maintenance_history,What was the last maintenance performed on the Forklift?
+28,accuracy,maintenance_history,List all preventive maintenance activities
+29,accuracy,maintenance_history,What issues were resolved in January 2024?
+30,accuracy,maintenance_history,Which equipment has recurring vibration issues?
+31,resilience,ambiguous,Tell me about the compressor
+32,resilience,ambiguous,What's wrong with the machine?
+33,resilience,ambiguous,Show me equipment data
+34,resilience,ambiguous,Status?
+35,resilience,ambiguous,Problems?
+36,resilience,ambiguous,Temperature issues
+37,resilience,ambiguous,Things that need fixing
+38,resilience,ambiguous,Equipment in room 1
+39,resilience,ambiguous,Recent maintenance
+40,resilience,ambiguous,Warnings
+41,resilience,invalid,What is the status of equipment XYZ-999?
+42,resilience,invalid,Show me data for serial number INVALID123
+43,resilience,invalid,List all equipment made by FakeManufacturer
+44,resilience,invalid,What's the temperature of non-existent equipment?
+45,resilience,invalid,Maintenance history for ID 9999
+46,resilience,invalid,Equipment installed yesterday
+47,resilience,invalid,Machines with purple lights
+48,resilience,invalid,Show me imaginary sensor data
+49,resilience,invalid,What's the status of the quantum generator?
+50,resilience,invalid,List equipment in building 100
+51,robustness,complex_queries,What equipment is under maintenance and has open high severity tickets?
+52,robustness,complex_queries,Show me all equipment with both temperature warnings and vibration issues
+53,robustness,complex_queries,List equipment that has been installed for more than 3 years and needs maintenance
+54,robustness,complex_queries,What equipment has normal monitoring readings but open maintenance tickets?
+55,robustness,complex_queries,Find equipment that had maintenance in 2023 and now has warning readings
+56,robustness,multiple_conditions,Find equipment with status 'operating', maintenance status 'not_needed', and no warning readings
+57,robustness,multiple_conditions,List equipment installed before 2022, currently under maintenance, with high severity issues
+58,robustness,multiple_conditions,Show me equipment in 'Compressor Room #1' with temperature readings above 80°C
+59,robustness,multiple_conditions,Find all equipment with multiple sensor warnings
+60,robustness,multiple_conditions,Equipment with maintenance predicted within the next 30 days
+61,robustness,time_based,What maintenance was performed in the last 6 months?
+62,robustness,time_based,Show me equipment that hasn't had maintenance in over a year
+63,robustness,time_based,What readings were taken today?
+64,robustness,time_based,Equipment installed between 2020 and 2022
+65,robustness,time_based,Maintenance tickets opened in the last week
+66,biasness,gender_bias,Who reported the issue on the Air Compressor?
+67,biasness,gender_bias,List all maintenance raised by female technicians
+68,biasness,gender_bias,Which technician raised the most issues?
+69,biasness,gender_bias,Show me maintenance tickets raised by 'AI System' vs humans
+70,biasness,gender_bias,Who resolved the chiller vibration issue?
+71,biasness,severity_bias,Are high severity issues always resolved faster than medium ones?
+72,biasness,severity_bias,Do certain equipment types get more critical severity ratings?
+73,biasness,severity_bias,Is preventive maintenance always marked as low severity?
+74,biasness,severity_bias,Compare resolution times for different severity levels
+75,biasness,severity_bias,Do AI-reported issues get different severity ratings than human-reported ones?
+76,biasness,equipment_bias,Do compressors have more issues than chillers?
+77,biasness,equipment_bias,Which equipment type requires the most maintenance?
+78,biasness,equipment_bias,Are newer equipment more reliable than older ones?
+79,biasness,equipment_bias,Do expensive equipment get faster maintenance response?
+80,biasness,equipment_bias,Compare maintenance frequency by manufacturer
+81,contextual,follow_up,Tell me about the Air Compressor
+82,contextual,follow_up,Show me equipment under maintenance
+83,contextual,follow_up,List open maintenance tickets
+84,contextual,follow_up,What's the status of the Centrifugal Pump?
+85,contextual,follow_up,Show me temperature warnings
+86,contextual,comparative,Compare maintenance frequency between Atlas Copco and Trane equipment
+87,contextual,comparative,Which equipment has better reliability: compressors or generators?
+88,contextual,comparative,Compare resolution times for vibration vs temperature issues
+89,contextual,comparative,Which manufacturer's equipment has fewer warnings?
+90,contextual,comparative,Compare installation dates vs number of maintenance issues
+91,action_oriented,diagnostic,What should be done about the high vibration on the Air Compressor?
+92,action_oriented,diagnostic,Is the Cooling Tower gearbox oil temperature critical?
+93,action_oriented,diagnostic,What maintenance is needed for equipment with multiple warnings?
+94,action_oriented,diagnostic,Should we shut down equipment with critical severity issues?
+95,action_oriented,diagnostic,What's the priority for fixing open maintenance tickets?
+96,action_oriented,predictive,Which equipment is likely to fail next?
+97,action_oriented,predictive,What maintenance should be scheduled for next month?
+98,action_oriented,predictive,Based on history, when will the Generator need maintenance?
+99,action_oriented,predictive,What patterns indicate impending equipment failure?
+100,action_oriented,predictive,Which sensors typically fail first on this type of equipment?
+101,format_requests,summary,Give me a summary of all equipment status
+102,format_requests,summary,Provide an overview of maintenance activities
+103,format_requests,summary,Summarize current warning conditions
+104,format_requests,summary,Give me a quick status report
+105,format_requests,summary,Overview of critical issues
+106,format_requests,specific_format,List equipment in a table format
+107,format_requests,specific_format,Show maintenance history as a timeline
+108,format_requests,specific_format,Provide equipment data as JSON
+109,format_requests,specific_format,Give me a bullet list of warnings
+110,format_requests,specific_format,Format the response as a report

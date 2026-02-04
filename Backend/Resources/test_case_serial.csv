@@ -1,0 +1,111 @@
+question_id,category,sub_category,question,expected_serial_numbers
+1,accuracy,equipment_info,What is the current status of the Air Compressor GA200-8.5?,AC2022-34567
+2,accuracy,equipment_info,When was the Centrifugal Pump CP-500-SS installed?,FM2023-78451
+3,accuracy,equipment_info,Where is the Diesel Generator C500D5 located?,CM2019-23456
+4,accuracy,equipment_info,What is the manufacturer of the Cooling Tower VFXT-5000?,BAC2021-78901
+5,accuracy,equipment_info,Give me the serial number for the Boiler CB-350,CB2021-34567
+6,accuracy,equipment_info,Which equipment has serial number TR2020-45678?,Chiller CVHE-300
+7,accuracy,equipment_info,What's the model of the equipment with serial number TOY2022-84521?,8FBE20
+8,accuracy,equipment_info,List all equipment manufactured by Atlas Copco,AC2022-34567
+9,accuracy,equipment_info,How many equipment are currently operating normally?,"FM2023-78451, AC2022-34567, BAC2021-78901, TR2020-45678, CM2019-23456, CB2021-34567, TOY2022-84521, INT2021-95623, DEM2023-14785, SK2020-63214, KR2022-87412, ABB2021-74512, HA2020-32589"
+10,accuracy,equipment_info,Which equipment are currently under maintenance?,"FM2023-78451, AC2022-34567"
+11,accuracy,monitoring_data,What is the current temperature reading for the Air Compressor's compressor oil?,AC2022-34567
+12,accuracy,monitoring_data,Show me vibration data for equipment FM2023-78451,FM2023-78451
+13,accuracy,monitoring_data,Which equipment has warning status readings?,"FM2023-78451, AC2022-34567, TR2020-45678, CM2019-23456, CB2021-34567"
+14,accuracy,monitoring_data,What's the pressure reading at the Air Compressor AC2022-34567 discharge?,AC2022-34567
+15,accuracy,monitoring_data,List all monitoring data for the Chiller TR2020-45678 with warnings,TR2020-45678
+16,accuracy,monitoring_data,What is the normal temperature range for the Cooling Tower BAC2021-78901 gearbox oil?,BAC2021-78901
+17,accuracy,monitoring_data,Which equipment has the highest vibration reading?,FM2023-78451
+18,accuracy,monitoring_data,What is the current battery voltage for the Forklift TOY2022-84521?,TOY2022-84521
+19,accuracy,monitoring_data,Show me all temperature readings above their thresholds for equipment CB2021-34567,CB2021-34567
+20,accuracy,monitoring_data,What monitoring parameters are tracked for the Automated Guided Vehicle DEM2023-14785?,DEM2023-14785
+21,accuracy,maintenance_history,What maintenance issues were reported for AC2022-34567 in 2023?,AC2022-34567
+22,accuracy,maintenance_history,List all open maintenance tickets,"FM2023-78451, AC2022-34567, BAC2021-78901, TR2020-45678"
+23,accuracy,maintenance_history,What was the most recent maintenance done on the Cooling Tower BAC2021-78901?,BAC2021-78901
+24,accuracy,maintenance_history,How many critical severity issues have been reported for equipment FM2023-78451?,FM2023-78451
+25,accuracy,maintenance_history,Show me all maintenance logs for equipment BAC2021-78901,BAC2021-78901
+26,accuracy,maintenance_history,Which equipment has the most maintenance records?,AC2022-34567
+27,accuracy,maintenance_history,What was the last maintenance performed on the Forklift TOY2022-84521?,TOY2022-84521
+28,accuracy,maintenance_history,List all preventive maintenance activities for equipment TR2020-45678,TR2020-45678
+29,accuracy,maintenance_history,What issues were resolved in January 2024 for equipment CB2021-34567?,CB2021-34567
+30,accuracy,maintenance_history,Which equipment has recurring vibration issues?,FM2023-78451
+31,resilience,ambiguous,Tell me about the Air Compressor with serial AC2022-34567,AC2022-34567
+32,resilience,ambiguous,What's wrong with the equipment FM2023-78451?,FM2023-78451
+33,resilience,ambiguous,Show me equipment data for TR2020-45678,TR2020-45678
+34,resilience,ambiguous,Status of BAC2021-78901?,BAC2021-78901
+35,resilience,ambiguous,Problems with CM2019-23456?,CM2019-23456
+36,resilience,ambiguous,Temperature issues on CB2021-34567,CB2021-34567
+37,resilience,ambiguous,Things that need fixing on TOY2022-84521,TOY2022-84521
+38,resilience,ambiguous,Equipment in Cooling Tower #3 with serial BAC2021-78901,BAC2021-78901
+39,resilience,ambiguous,Recent maintenance on AC2022-34567,AC2022-34567
+40,resilience,ambiguous,Warnings for FM2023-78451,FM2023-78451
+41,resilience,invalid,What is the status of equipment with serial number XYZ-999?,none
+42,resilience,invalid,Show me data for serial number INVALID123,none
+43,resilience,invalid,List all equipment made by FakeManufacturer,none
+44,resilience,invalid,What's the temperature of non-existent equipment?,none
+45,resilience,invalid,Maintenance history for serial ID 9999,none
+46,resilience,invalid,Equipment installed yesterday with serial TEST-001,none
+47,resilience,invalid,Machines with purple lights,none
+48,resilience,invalid,Show me imaginary sensor data for equipment,none
+49,resilience,invalid,What's the status of the quantum generator?,none
+50,resilience,invalid,List equipment in building 100,none
+51,robustness,complex_queries,What equipment is under maintenance and has open high severity tickets?,"FM2023-78451, AC2022-34567"
+52,robustness,complex_queries,Show me all equipment with both temperature warnings and vibration issues,"FM2023-78451, AC2022-34567"
+53,robustness,complex_queries,List equipment that has been installed for more than 3 years and needs maintenance,"CM2019-23456, TR2020-45678, SK2020-63214"
+54,robustness,complex_queries,What equipment has normal monitoring readings but open maintenance tickets?,"FM2023-78451, AC2022-34567"
+55,robustness,complex_queries,Find equipment that had maintenance in 2023 and now has warning readings,"FM2023-78451, AC2022-34567, TR2020-45678"
+56,robustness,multiple_conditions,Find equipment with status 'operating', maintenance status 'not_needed', and no warning readings,"TOY2022-84521, INT2021-95623, DEM2023-14785, KR2022-87412, ABB2021-74512"
+57,robustness,multiple_conditions,List equipment installed before 2022, currently under maintenance, with high severity issues,"CM2019-23456, TR2020-45678"
+58,robustness,multiple_conditions,Show me equipment in 'Compressor Room #1' with temperature readings above 80°C,AC2022-34567
+59,robustness,multiple_conditions,Find all equipment with multiple sensor warnings,"FM2023-78451, AC2022-34567, TR2020-45678"
+60,robustness,multiple_conditions,Equipment with maintenance predicted within the next 30 days,"FM2023-78451, AC2022-34567, BAC2021-78901, TR2020-45678"
+61,robustness,time_based,What maintenance was performed in the last 6 months on equipment FM2023-78451?,FM2023-78451
+62,robustness,time_based,Show me equipment that hasn't had maintenance in over a year,"CM2019-23456, SK2020-63214"
+63,robustness,time_based,What readings were taken today for equipment AC2022-34567?,AC2022-34567
+64,robustness,time_based,Equipment installed between 2020 and 2022,"TR2020-45678, BAC2021-78901, CB2021-34567, INT2021-95623"
+65,robustness,time_based,Maintenance tickets opened in the last week for equipment FM2023-78451,FM2023-78451
+66,biasness,gender_bias,Who reported the issue on the Air Compressor AC2022-34567?,AC2022-34567
+67,biasness,gender_bias,List all maintenance raised by technicians for equipment FM2023-78451,FM2023-78451
+68,biasness,gender_bias,Which technician raised the most issues for equipment TR2020-45678?,TR2020-45678
+69,biasness,gender_bias,Show me maintenance tickets raised by 'AI System' vs humans for equipment CB2021-34567,CB2021-34567
+70,biasness,gender_bias,Who resolved the chiller vibration issue for equipment TR2020-45678?,TR2020-45678
+71,biasness,severity_bias,Are high severity issues always resolved faster than medium ones for equipment FM2023-78451?,FM2023-78451
+72,biasness,severity_bias,Do certain equipment types get more critical severity ratings? Compare AC2022-34567 and TR2020-45678,"AC2022-34567, TR2020-45678"
+73,biasness,severity_bias,Is preventive maintenance always marked as low severity for equipment BAC2021-78901?,BAC2021-78901
+74,biasness,severity_bias,Compare resolution times for different severity levels for equipment AC2022-34567,AC2022-34567
+75,biasness,severity_bias,Do AI-reported issues get different severity ratings than human-reported ones for equipment FM2023-78451?,FM2023-78451
+76,biasness,equipment_bias,Do compressors have more issues than chillers? Compare AC2022-34567 and TR2020-45678,"AC2022-34567, TR2020-45678"
+77,biasness,equipment_bias,Which equipment type requires the most maintenance? Compare FM2023-78451, AC2022-34567, BAC2021-78901,"FM2023-78451, AC2022-34567, BAC2021-78901"
+78,biasness,equipment_bias,Are newer equipment more reliable than older ones? Compare TOY2022-84521 and CM2019-23456,"TOY2022-84521, CM2019-23456"
+79,biasness,equipment_bias,Do expensive equipment get faster maintenance response? Compare TR2020-45678 and AC2022-34567,"TR2020-45678, AC2022-34567"
+80,biasness,equipment_bias,Compare maintenance frequency by manufacturer for equipment FM2023-78451 and AC2022-34567,"FM2023-78451, AC2022-34567"
+81,contextual,follow_up,Tell me about the Air Compressor with serial AC2022-34567,AC2022-34567
+82,contextual,follow_up,Show me equipment under maintenance including FM2023-78451,FM2023-78451
+83,contextual,follow_up,List open maintenance tickets for equipment AC2022-34567,AC2022-34567
+84,contextual,follow_up,What's the status of the Centrifugal Pump FM2023-78451?,FM2023-78451
+85,contextual,follow_up,Show me temperature warnings for equipment TR2020-45678,TR2020-45678
+86,contextual,comparative,Compare maintenance frequency between Atlas Copco AC2022-34567 and Trane TR2020-45678 equipment,"AC2022-34567, TR2020-45678"
+87,contextual,comparative,Which equipment has better reliability: compressors AC2022-34567 or generators CM2019-23456?,"AC2022-34567, CM2019-23456"
+88,contextual,comparative,Compare resolution times for vibration vs temperature issues on equipment FM2023-78451,FM2023-78451
+89,contextual,comparative,Which manufacturer's equipment has fewer warnings? Compare FlowMaster FM2023-78451 and Trane TR2020-45678,"FM2023-78451, TR2020-45678"
+90,contextual,comparative,Compare installation dates vs number of maintenance issues for equipment CB2021-34567 and TOY2022-84521,"CB2021-34567, TOY2022-84521"
+91,action_oriented,diagnostic,What should be done about the high vibration on the Air Compressor AC2022-34567?,AC2022-34567
+92,action_oriented,diagnostic,Is the Cooling Tower BAC2021-78901 gearbox oil temperature critical?,BAC2021-78901
+93,action_oriented,diagnostic,What maintenance is needed for equipment FM2023-78451 with multiple warnings?,FM2023-78451
+94,action_oriented,diagnostic,Should we shut down equipment CB2021-34567 with critical severity issues?,CB2021-34567
+95,action_oriented,diagnostic,What's the priority for fixing open maintenance tickets for equipment TR2020-45678?,TR2020-45678
+96,action_oriented,predictive,Which equipment is likely to fail next? Check FM2023-78451 and AC2022-34567,"FM2023-78451, AC2022-34567"
+97,action_oriented,predictive,What maintenance should be scheduled for next month for equipment BAC2021-78901?,BAC2021-78901
+98,action_oriented,predictive,Based on history, when will the Generator CM2019-23456 need maintenance?,CM2019-23456
+99,action_oriented,predictive,What patterns indicate impending equipment failure for FM2023-78451?,FM2023-78451
+100,action_oriented,predictive,Which sensors typically fail first on this type of equipment? Check AC2022-34567,AC2022-34567
+101,format_requests,summary,Give me a summary of all equipment status including FM2023-78451 and AC2022-34567,"FM2023-78451, AC2022-34567"
+102,format_requests,summary,Provide an overview of maintenance activities for equipment BAC2021-78901,BAC2021-78901
+103,format_requests,summary,Summarize current warning conditions for equipment TR2020-45678,TR2020-45678
+104,format_requests,summary,Give me a quick status report for equipment CB2021-34567,CB2021-34567
+105,format_requests,summary,Overview of critical issues for equipment FM2023-78451,FM2023-78451
+106,format_requests,specific_format,List equipment FM2023-78451, AC2022-34567, TR2020-45678 in a table format,"FM2023-78451, AC2022-34567, TR2020-45678"
+107,format_requests,specific_format,Show maintenance history for equipment AC2022-34567 as a timeline,AC2022-34567
+108,format_requests,specific_format,Provide equipment data for BAC2021-78901 as JSON,BAC2021-78901
+109,format_requests,specific_format,Give me a bullet list of warnings for equipment TR2020-45678,TR2020-45678
+110,format_requests,specific_format,Format the response as a report for equipment FM2023-78451,FM2023-78451
